@@ -1,8 +1,10 @@
 # 3D ResNets for Action Recognition
 
-## Update (2019/12/03)
+## Update (2019/12/05)
 
-Replace depreciated `nn.init.kaiming_normal` with `nn.init.kaiming_normal_`.
+Renamed layers with '.' in the name in `resnext`.
+Fixed `fp16` compatibility.
+Replaced depreciated `nn.init.kaiming_normal` with `nn.init.kaiming_normal_`.
 
 ## Update (2018/2/21)
 
