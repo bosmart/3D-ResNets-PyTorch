@@ -23,9 +23,7 @@ def downsample_basic_block(x, planes, stride):
     out = F.avg_pool3d(x, kernel_size=1, stride=stride)
     zero_pads = torch.Tensor(
         out.size(0), planes - out.size(1), out.size(2), out.size(3),
-        out.size(4)).zero_()
-    if isinstance(out.data, torch.cuda.FloatTensor):
-        zero_pads = zero_pads.cuda()
+        out.size(4)).zero_().type(out.data.dtype).to(out.data.device)
 
     out = Variable(torch.cat([out.data, zero_pads], dim=1))
 
