@@ -1,5 +1,9 @@
 # 3D ResNets for Action Recognition
 
+## Update (2019/12/03)
+
+Replace depreciated `nn.init.kaiming_normal` with `nn.init.kaiming_normal_`.
+
 ## Update (2018/2/21)
 
 Our paper "Can Spatiotemporal 3D CNNs Retrace the History of 2D CNNs and ImageNet?" is accepted to CVPR2018!  
